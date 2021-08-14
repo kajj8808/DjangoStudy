@@ -1,0 +1,1 @@
+각각의 Field 인스턴스의 이름(question_text 또는 pub_date)은 기계가 읽기 좋은 형식(machine-friendly format)의 데이터베이스 필드 이름입니다. 이 필드명을 Python 코드에서 사용할 수 있으며, 데이터베이스에서는 컬럼명으로 사용할 것입니다.

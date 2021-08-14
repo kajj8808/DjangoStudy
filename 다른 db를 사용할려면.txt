@@ -1,0 +1,11 @@
+https://docs.djangoproject.com/ko/3.2/intro/tutorial02/
+
+이제, mysite/settings.py 파일을 열어보세요. 이 파일은 Django 설정을 모듈 변수로 표현한 보통의 Python 모듈입니다.
+
+기본적으로는 SQLite을 사용하도록 구성되어 있습니다. 만약 데이터베이스를 처음 경험해보거나, Django에서 데이터베이스를 한번 경험해 보고 싶다면, SQLite가 가장 간단한 방법입니다. SQLite는 Python에서 기본으로 제공되기 때문에 별도로 설치할 필요가 없습니다. 그러나 실제 프로젝트를 시작할 때에는, 나중에 데이터베이스를 교체하느라 골치 아파질 일을 피하기 위해서라도 PostgreSQL 같이 좀 더 확장성 있는 데이터베이스를 사용하는 것이 좋습니다.
+
+다른 데이터베이스를 사용해보고 싶다면, 적절한 데이터베이스 바인딩을 설치하고, 데이터베이스 연결 설정과 맞게끔 DATABASES 'default' 항목의 값을 다음의 키 값으로 바꿔주세요.
+
+ENGINE – 'django.db.backends.sqlite3', 'django.db.backends.postgresql', 'django.db.backends.mysql', 또는 'django.db.backends.oracle'. 그외에 서드파티 백엔드 참조.
+NAME – The name of your database. If you’re using SQLite, the database will be a file on your computer; in that case, NAME should be the full absolute path, including filename, of that file. The default value, BASE_DIR / 'db.sqlite3', will store the file in your project directory.
+SQLite 를 데이터베이스로 사용하지 않는 경우, USER, PASSWORD, HOST 같은 추가 설정이 반드시 필요합니다. 더 자세한 내용은 DATABASES 문서를 참조해 주세요.
